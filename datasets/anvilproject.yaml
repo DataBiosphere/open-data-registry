@@ -35,12 +35,12 @@ License: "https://anvilproject.org/faq/data-security"
 Citation: "Schatz MC, Philippakis AA, Afgan E, Banks E, Carey VJ, Carroll RJ, et al. [Inverting the model of genomics data sharing with the NHGRI Genomic Data Science Analysis, Visualization, and Informatics Lab-space (AnVIL)](https://www.cell.com/cell-genomics/fulltext/S2666-979X(21)00106-3). Cell Genomics. 2022;2. doi:10.1016/j.xgen.2021.100085"
 
 Resources:
-  - Description: "An S3 bucket containing all publicly accessible data files in the AnVIL Project. The bucket layout and access procedures are documented at https://github.com/DataBiosphere/azul/blob/develop/docs/mirror.rst and metadata can be viewed at https://explore.anvilproject.org/datasets or accessed programmatically at https://service.explore.anvilproject.org/"
+  - Description: "An S3 bucket containing all publicly accessible data files in the AnVIL Project. The bucket layout and access procedures are documented [here](https://github.com/DataBiosphere/azul/blob/develop/docs/mirror.rst) and metadata about the files and their provenance can be viewed at the [AnVIL Data Explorer](https://explore.anvilproject.org/datasets) or accessed programmatically via the [Azul REST Web Service](https://service.explore.anvilproject.org/)"
     ARN: arn:aws:s3:::anvilproject
     Region: us-east-1
     Type: S3 Bucket
     Explore:
-      - "[Data Browser UI](https://explore.anvilproject.org/datasets)"
+      - "[AnVIL Data Explorer](https://explore.anvilproject.org/datasets)"
       - "[Azul REST Web Service](https://service.explore.anvilproject.org/)"
   - Description: "Notifications for new NHGRI AnVIL data"
     ARN: arn:aws:sns:us-east-1:160936121715:anvilproject-object_created
