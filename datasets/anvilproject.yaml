@@ -46,6 +46,17 @@ Resources:
     ARN: arn:aws:sns:us-east-1:160936121715:anvilproject-object_created
     Region: us-east-1
     Type: SNS Topic
+  - Description: "An S3 bucket containing some of the managed-access data files in the AnVIL Project. Access to the files in this bucket requires a Google identity that is registered with [Terra](https://terra.bio/) and that is connected, in Terra, to an NIH Researcher Auth Service (RAS) account. The [AnVIL Data Explorer](https://explore.anvilproject.org/datasets) guides users through the account setup. It also lets users apply for access to any of the AnVIL managed-access data sets. Once access has been granted, the [AnVIL Data Explorer](https://explore.anvilproject.org/datasets) can be used to download files individually, or in large batches, using the command line utility `curl`. Programmatic access to the files in this bucket is facilitated through the [Azul REST Web Service](https://service.explore.anvilproject.org/), which mints signed URLs of the files in this S3 bucket."
+    ARN: arn:aws:s3:::anvilproject-ma
+    Region: us-east-1
+    Type: S3 Bucket
+    Explore:
+      - "[AnVIL Data Explorer](https://explore.anvilproject.org/datasets)"
+      - "[Azul REST Web Service](https://service.explore.anvilproject.org/)"
+  - Description: "Notifications for new NHGRI AnVIL data"
+    ARN: arn:aws:sns:us-east-1:160936121715:anvilproject-ma-object_created
+    Region: us-east-1
+    Type: SNS Topic
 
 DataAtWork:
   Publications:
@@ -204,4 +215,3 @@ DataAtWork:
 
 ADXCategories:
   - Healthcare & Life Sciences Data
-
